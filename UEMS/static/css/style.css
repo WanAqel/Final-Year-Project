@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px;
+    color: white;
+    max-height: 40px;
+    z-index: 1000;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin: auto;
+   
+}
+
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Main Content Section */
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Search Bar (Centered & Sticky) */
+.search-bar {
+    position: sticky;
+    top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 999;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Events Section (Scrollable) */
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-grow: 1; /* Allows it to expand */
+    overflow-y: auto; /* Enables scrolling inside */
+    max-height: calc(100vh - 120px); /* Adjust based on navbar and padding */
+    padding: 10px;
+}
+
+.no-events{
+    content: "No events available";
+    color: #777;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 20px;
+}
+
+
+/* Style the scrollbar inside .events */
+.events::-webkit-scrollbar {
+    width: 8px;
+}
+
+.events::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.events::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Event Card */
+.event-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    max-height: 500px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 100%;  
+    height: 150px; 
+    object-fit: contain; 
+    border-radius: 5px; 
+}
+
+.event-card button {
+    background-color: #28a745; /* Green */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; 
+    padding: 8px 16px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.event-card button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+.my-upcoming-events {
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+    height: auto;
+    position: sticky;
+    top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
