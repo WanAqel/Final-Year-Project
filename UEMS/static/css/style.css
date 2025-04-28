@@ -67,7 +67,7 @@ body {
 
 .search-bar button {
     padding: 10px;
-    background-color: #28a745;
+    background-color: transparent;
     color: white;
     border: none;
     margin-left: 10px;
@@ -111,38 +111,59 @@ body {
 }
 
 /* Event Card */
+
 .event-card {
+    display: block; 
     background-color: white;
     padding: 15px;
     border-radius: 8px;
     width: 250px;
     max-height: 500px;
     text-align: center;
+    text-decoration: none; 
+    color: inherit; /* Keeps text color normal */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
 }
 
+
+/* Remove link appearance from text */
+.event-card h3,
+.event-card p {
+    text-decoration: none; /* Ensure text doesn't look like a link */
+    color: black; /* Keep normal text color */
+}
+
+/* Image styling */
 .event-card img {
-    width: 100%;  
-    height: 150px; 
-    object-fit: contain; 
-    border-radius: 5px; 
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
 }
 
+/* Register button styling */
 .event-card button {
     background-color: #28a745; /* Green */
-    color: white; /* Text color */
-    border: none; /* Remove default border */
-    border-radius: 5px; 
-    padding: 8px 16px; /* Adjust padding */
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Add pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+/* Hover effect */
 .event-card button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838; /* Darker green */
 }
 
+/* Add slight hover effect to indicate clickability */
+.event-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 .my-upcoming-events {
     flex: 1;
@@ -154,3 +175,4 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
